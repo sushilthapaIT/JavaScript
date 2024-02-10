@@ -62,13 +62,14 @@ let filMarks = marks.filter((val) => {
 
 console.log(filMarks);
 
-q2
+// q2
 let userInput = prompt("Enter how many number of list you want to create: ");
 let newArray = [];
 
     for (let i = 0; i < userInput; i++){
         let inp = prompt(`Enter ${i+1} number: `);
-        newArray.push(inp);
+        newArray.push(Number(inp));
+        let integerValue = parseInt(newArray);
     }
     console.log(newArray);
 
@@ -78,9 +79,9 @@ let sumArray = newArray.reduce((prev, curr) => {
 
 
 
-const productArray = newArray.reduce((prev, curr){
+const productArray = newArray.reduce((prev, curr) => {
     return prev * curr;
-})
+});
 
 console.log(sumArray);
 console.log(productArray);
