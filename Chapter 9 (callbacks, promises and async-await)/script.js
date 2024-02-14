@@ -202,6 +202,30 @@
 //     });
     
 // // async function always return promise
-async function hello() {
-    console.log("hello")
+// async function hello() {
+//     console.log("hello")
+// }
+
+
+function api(dataId) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log("weather data");
+            resolve(200);
+        }, 2000);
+    });
+}
+
+// async function getWeatherData() {
+//     await api();
+//     await api();
+// }
+
+
+// // async-wait
+
+async function getAllData() {
+    await api(1);
+    await api(2);
+    await api (3);
 }
